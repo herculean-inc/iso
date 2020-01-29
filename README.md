@@ -1,4 +1,4 @@
-# Pop!\_OS ISO production
+# Workspaces ISO production
 
 This repository contains the tools necessary for building Pop!\_OS ISOs.
 
