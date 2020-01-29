@@ -1,4 +1,4 @@
-DISTRO_NAME=Pop_OS
+DISTRO_NAME=Workspaces
 
 # Repositories to be present in installed system
 DISTRO_REPOS=\
@@ -60,10 +60,14 @@ RM_PKGS=\
 MAIN_POOL=\
 	at \
 	dfu-programmer \
+	efibootmgr \
 	ethtool \
 	grub-efi-amd64 \
 	grub-efi-amd64-bin \
 	grub-efi-amd64-signed \
+	grub-pc \
+	grub-pc-bin \
+	grub-gfxpayload-lists \
 	kernelstub \
 	libfl2 \
 	libx86-1 \

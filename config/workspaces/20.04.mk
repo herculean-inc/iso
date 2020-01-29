@@ -1,4 +1,4 @@
-DISTRO_NAME=Pop_OS
+DISTRO_NAME=Workspaces
 
 # Repositories to be present in installed system
 DISTRO_REPOS=\
@@ -47,15 +47,20 @@ LIVE_PKGS=\
 # Packages to remove from installed system (usually installed as Recommends)
 RM_PKGS=\
 	imagemagick-6.q16 \
+	mozc-utils-gui \
 	pop-installer-session \
-	tracker \
+	snapd \
+	ubuntu-session \
+	ubuntu-wallpapers \
 	unattended-upgrades \
-	xul-ext-ubufox
+	xul-ext-ubufox \
+	yaru-theme-gnome-shell
 
 # Packages not installed, but that may need to be discovered by the installer
 MAIN_POOL=\
 	at \
 	dfu-programmer \
+	efibootmgr \
 	ethtool \
 	grub-efi-amd64 \
 	grub-efi-amd64-bin \
@@ -64,6 +69,7 @@ MAIN_POOL=\
 	grub-pc-bin \
 	grub-gfxpayload-lists \
 	kernelstub \
+	libfl2 \
 	libx86-1 \
 	pm-utils \
 	powermgmt-base \

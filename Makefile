@@ -1,5 +1,5 @@
 # Configuration settings
-DISTRO_CODE?=pop-os
+DISTRO_CODE?=workspaces
 DISTRO_VERSION?=19.10
 
 DISTRO_EPOCH?=$(shell date +%s)
