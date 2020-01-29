@@ -120,7 +120,7 @@ $(BUILD)/live: $(BUILD)/chroot
 	"scripts/mount.sh" "$@.partial"
 
 	# Copy GPG public key for APT CDROM
-	gpg --batch --yes --export --armor "$(GPG_NAME)" | sudo tee "$@.partial/iso/apt-cdrom.key"
+	gpg --batch --yes --export --armor --local-user "$(GPG_NAME)" | sudo tee "$@.partial/iso/apt-cdrom.key"
 
 	# Copy system76-power default modprobe.d configuration
 	sudo cp "data/system76-power.conf" "$@.partial/etc/modprobe.d/system76-power.conf"
