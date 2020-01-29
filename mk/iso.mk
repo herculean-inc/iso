@@ -105,7 +105,7 @@ $(BUILD)/grub:
 	mv "$@.partial" "$@"
 
 $(BUILD)/iso_data.tag: $(BUILD)/iso_create.tag $(BUILD)/grub
-	git submodule update --init data/workspaces-grub-theme
+	git submodule update --init --recursive data/workspaces-grub-theme
 
 	# Replace disk info
 	rm -rf "$(BUILD)/iso/.disk"
