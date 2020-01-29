@@ -105,7 +105,7 @@ $(BUILD)/grub:
 	mv "$@.partial" "$@"
 
 $(BUILD)/iso_data.tag: $(BUILD)/iso_create.tag $(BUILD)/grub
-	git submodule update --init data/grub-theme
+	git submodule update --init data/workspaces-grub-theme
 
 	# Replace disk info
 	rm -rf "$(BUILD)/iso/.disk"
@@ -135,7 +135,7 @@ $(BUILD)/iso_data.tag: $(BUILD)/iso_create.tag $(BUILD)/grub
 	cp "/usr/lib/grub/x86_64-efi/"*.mod "$(BUILD)/iso/boot/grub/x86_64-efi/"
 
 	# Copy grub theme
-	cp -r "data/grub-theme/usr/share/grub/themes" "$(BUILD)/iso/boot/grub/themes"
+	cp -r "data/workspaces-grub-theme/usr/share/grub/themes" "$(BUILD)/iso/boot/grub/themes"
 
 	touch "$@"
 
