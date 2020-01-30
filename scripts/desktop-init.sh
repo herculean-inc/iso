@@ -1,5 +1,9 @@
 #!/usr/bin/bash
 
+# clone repo
+git clone https://github.com/herculean-inc/workspaces-material-shell.git /usr/share/gnome-shell/extensions/workspaces-material-shell@herculean-inc
+
+# directories
 DCONF_SETTINGS_DIR="/etc/dconf/db/local.d"
 WORKSPACES_DESKTOP="$DCONF_SETTINGS_DIR/00-workspaces-desktop"
 

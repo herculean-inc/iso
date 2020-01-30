@@ -147,11 +147,7 @@ fi
 
 if [ -n "${DESKTOP}" ]
 then
-    # Setup Workspaces desktop.
-    echo "Installing Workspaces Material Shell."
-    git clone https://github.com/herculean-inc/workspaces-material-shell.git /usr/share/gnome-shell/extensions/workspaces-material-shell@herculean-inc
-
-    echo "Enabling Workspaces Material Shell."
+    echo "Installing and enabling Workspaces Material Shell."
     ./desktop-init.sh
 fi
 
