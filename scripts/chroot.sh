@@ -146,11 +146,14 @@ then
 fi
 
 # Setup Workspaces desktop.
-echo "Installing Workspaces Material Shell."
-git clone https://github.com/herculean-inc/workspaces-material-shell.git /usr/share/gnome-shell/extensions/workspaces-material-shell@herculean-inc
+if [ -n "${DESKTOP}" ]
+then
+    echo "Installing Workspaces Material Shell."
+    git clone https://github.com/herculean-inc/workspaces-material-shell.git /usr/share/gnome-shell/extensions/workspaces-material-shell@herculean-inc
+fi
 
-echo "Enabling Workspaces Material Shell."
-gnome-extensions enable workspaces-material-shell@herculean-inc
+# echo "Enabling Workspaces Material Shell."
+# gnome-extensions enable workspaces-material-shell@herculean-inc
 
 # Remove apt files
 if [ -n "${CLEAN}" ]

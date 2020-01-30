@@ -42,7 +42,8 @@ $(BUILD)/chroot: $(BUILD)/debootstrap
 	sudo chroot "$@.partial" /bin/bash -e -c \
 		"UPDATE=1 \
 		UPGRADE=1 \
-		INSTALL=\"--no-install-recommends gnupg software-properties-common\" \
+		INSTALL=\"--no-install-recommends gnupg software-properties-common git gnome-shell gconf2 fonts-roboto fonts-roboto-fontface\" \
+		DESKTOP=1 \
 		AUTOREMOVE=1 \
 		CLEAN=1 \
 		/iso/chroot.sh"
