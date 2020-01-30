@@ -21,6 +21,7 @@ DISTRO_PKGS=\
 	linux-system76 \
 	ubuntu-minimal \
 	ubuntu-standard \
+	git \
 	pop-desktop \
 	gnome-shell \
 	gnome-tweak-tool \

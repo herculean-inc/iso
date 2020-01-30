@@ -22,6 +22,7 @@ DISTRO_PKGS=\
 	ubuntu-minimal \
 	ubuntu-standard \
 	pop-desktop \
+	git \
 	gnome-shell \
 	gnome-tweaks \
 	papirus-icon-theme \
