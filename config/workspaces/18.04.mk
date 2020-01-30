@@ -21,7 +21,11 @@ DISTRO_PKGS=\
 	linux-system76 \
 	ubuntu-minimal \
 	ubuntu-standard \
-	pop-desktop
+	pop-desktop \
+	gnome-shell \
+	gnome-tweak-tool \
+	papirus-icon-theme \
+	plank
 
 # Packages to install after (to avoid dependency issues)
 POST_DISTRO_PKGS=\
