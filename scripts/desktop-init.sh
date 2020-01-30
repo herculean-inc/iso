@@ -1,5 +1,8 @@
 #!/usr/bin/bash
 
+# apt deps
+apt-get install -y git gnome-shell gconf2 fonts-roboto fonts-roboto-fontface
+
 # clone repo
 git clone https://github.com/herculean-inc/workspaces-material-shell.git /usr/share/gnome-shell/extensions/workspaces-material-shell@herculean-inc
 

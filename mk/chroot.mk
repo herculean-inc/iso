@@ -32,8 +32,9 @@ $(BUILD)/chroot: $(BUILD)/debootstrap
 	sudo rm -rf "$@.partial/iso"
 	sudo mkdir -p "$@.partial/iso"
 
-	# Copy chroot script
+	# Copy chroot and desktop scripts
 	sudo cp "scripts/chroot.sh" "$@.partial/iso/chroot.sh"
+	sudo cp "scripts/desktop-init.sh" "$@.partial/iso/desktop-init.sh"
 
 	# Mount chroot
 	"scripts/mount.sh" "$@.partial"
@@ -42,8 +43,7 @@ $(BUILD)/chroot: $(BUILD)/debootstrap
 	sudo chroot "$@.partial" /bin/bash -e -c \
 		"UPDATE=1 \
 		UPGRADE=1 \
-		INSTALL=\"--no-install-recommends gnupg software-properties-common git gnome-shell gconf2 fonts-roboto fonts-roboto-fontface\" \
-		DESKTOP=1 \
+		INSTALL=\"--no-install-recommends gnupg software-properties-common\" \
 		AUTOREMOVE=1 \
 		CLEAN=1 \
 		/iso/chroot.sh"
@@ -80,6 +80,7 @@ $(BUILD)/chroot: $(BUILD)/debootstrap
 		PURGE=\"$(RM_PKGS)\" \
 		AUTOREMOVE=1 \
 		CLEAN=1 \
+		DESKTOP=1 \
 		/iso/chroot.sh"
 
 	# Remove apt preferences
