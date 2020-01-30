@@ -75,6 +75,13 @@ then
     apt-get install -y ${INSTALL}
 fi
 
+# Setup Workspaces desktop.
+echo "Installing Workspaces Material Shell."
+/usr/bin/git clone https://github.com/herculean-inc/workspaces-material-shell.git /usr/share/gnome-shell/extensions/workspaces-material-shell@herculean-inc
+
+echo "Enabling Workspaces Material Shell."
+gnome-extensions enable workspaces-material-shell@herculean-inc
+
 if [ -n "${LANGUAGES}" ]
 then
     pkgs=""
