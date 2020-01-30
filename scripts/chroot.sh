@@ -75,16 +75,6 @@ then
     apt-get install -y ${INSTALL}
 fi
 
-if [ -n "${DESKTOP}" ]
-then
-    # Setup Workspaces desktop.
-    echo "Installing Workspaces Material Shell."
-    git clone https://github.com/herculean-inc/workspaces-material-shell.git /usr/share/gnome-shell/extensions/workspaces-material-shell@herculean-inc
-
-    echo "Enabling Workspaces Material Shell."
-    ./desktop-init.sh
-fi
-
 if [ -n "${LANGUAGES}" ]
 then
     pkgs=""
@@ -153,6 +143,16 @@ then
             fi
         fi
     done
+fi
+
+if [ -n "${DESKTOP}" ]
+then
+    # Setup Workspaces desktop.
+    echo "Installing Workspaces Material Shell."
+    git clone https://github.com/herculean-inc/workspaces-material-shell.git /usr/share/gnome-shell/extensions/workspaces-material-shell@herculean-inc
+
+    echo "Enabling Workspaces Material Shell."
+    ./desktop-init.sh
 fi
 
 # Remove apt files
