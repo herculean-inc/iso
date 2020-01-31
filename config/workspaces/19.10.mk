@@ -3,7 +3,8 @@ DISTRO_NAME=Workspaces
 # Repositories to be present in installed system
 DISTRO_REPOS=\
 	$(UBUNTU_REPOS) \
-	ppa:system76/pop
+	ppa:system76/pop \
+	ppa:herculean/workspaces \
 
 # Add proposed repositories
 ifeq ($(PROPOSED),1)
@@ -21,12 +22,7 @@ DISTRO_PKGS=\
 	linux-system76 \
 	ubuntu-minimal \
 	ubuntu-standard \
-	git \
-	pop-desktop \
-	gnome-shell \
-	gnome-tweaks \
-	papirus-icon-theme \
-	plank
+	workspaces-desktop
 
 # Packages to install after (to avoid dependency issues)
 POST_DISTRO_PKGS=\
