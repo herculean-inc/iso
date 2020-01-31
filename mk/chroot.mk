@@ -80,8 +80,11 @@ $(BUILD)/chroot: $(BUILD)/debootstrap
 		PURGE=\"$(RM_PKGS)\" \
 		AUTOREMOVE=1 \
 		CLEAN=1 \
-		DESKTOP=1 \
 		/iso/chroot.sh"
+
+	# Run desktop script as chroot
+	sudo chroot "$@.partial" /bin/bash -e \
+		/iso/desktop-init.sh
 
 	# Remove apt preferences
 	sudo rm "$@.partial/etc/apt/preferences.d/pop-iso"

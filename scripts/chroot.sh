@@ -145,12 +145,6 @@ then
     done
 fi
 
-if [ -n "${DESKTOP}" ]
-then
-    echo "Installing and enabling Workspaces Material Shell."
-    ./desktop-init.sh
-fi
-
 # Remove apt files
 if [ -n "${CLEAN}" ]
 then
