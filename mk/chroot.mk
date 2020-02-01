@@ -83,8 +83,8 @@ $(BUILD)/chroot: $(BUILD)/debootstrap
 		/iso/chroot.sh"
 
 	# Run desktop script as chroot
-	sudo chroot "$@.partial" /bin/bash -e \
-		/iso/desktop-init.sh
+	# sudo chroot "$@.partial" /bin/bash -e \
+	# 	/iso/desktop-init.sh
 
 	# Remove apt preferences
 	sudo rm "$@.partial/etc/apt/preferences.d/pop-iso"
