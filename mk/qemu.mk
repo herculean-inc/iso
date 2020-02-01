@@ -1,5 +1,6 @@
 QEMUFLAGS=\
 	-enable-kvm \
+	-show-cursor \
 	-m 4G \
 	-vga qxl
 
