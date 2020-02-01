@@ -5,6 +5,8 @@ DISTRO_REPOS=\
 	$(UBUNTU_REPOS) \
 	ppa:system76/pop \
 	ppa:herculean/workspaces \
+	ppa:tista/plata-theme \
+	ppa:papirus/papirus
 
 # Add proposed repositories
 ifeq ($(PROPOSED),1)
@@ -22,7 +24,9 @@ DISTRO_PKGS=\
 	linux-system76 \
 	ubuntu-minimal \
 	ubuntu-standard \
-	workspaces-desktop
+	workspaces-desktop \
+	plata-theme \
+	papirus-icon-theme
 
 # Packages to install after (to avoid dependency issues)
 POST_DISTRO_PKGS=\
