@@ -7,7 +7,9 @@ DISTRO_DATE?=$(shell date +%Y%m%d)
 
 ISO_NAME?=$(DISTRO_CODE)_$(DISTRO_VERSION)
 
+# local user name
 GPG_NAME?=`id -un`
+# Workspaces Debug Key
 GPG_SIGNING_KEY?="D4DB34C8"
 
 PROPOSED?=0
