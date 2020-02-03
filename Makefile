@@ -13,10 +13,10 @@ GPG_NAME?=`id -un`
 GPG_SIGNING_KEY?="D4DB34C8"
 
 PROPOSED?=0
-NVIDIA?=0
+NVIDIA=1
 
 # Enable local (pop_os hosted) apt mirror
-FAST_MIRROR?=0
+FAST_MIRROR=0
 
 # Include automatic variables
 include mk/automatic.mk
