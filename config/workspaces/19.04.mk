@@ -58,8 +58,7 @@ RM_PKGS=\
 	ubuntu-session \
 	ubuntu-wallpapers \
 	unattended-upgrades \
-	xul-ext-ubufox \
-	yaru-theme-gnome-shell
+	xul-ext-ubufox
 
 # Packages not installed, but that may need to be discovered by the installer
 MAIN_POOL=\
